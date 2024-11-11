@@ -8,10 +8,10 @@
 </head>
 
 <body>
-
+<h1 style="color: red;">Profile</h1>
 @foreach ($profiles as $profile)
     @if ($profile->user)
-        <h2>{{ $profile->user->name }}</h2>
+        <h2 style="color: grey;">{{ $profile->user->name }}</h2>
         <p>Email: {{ $profile->user->email }}</p>
         <p>Birthdate: {{ $profile->user->birthdate }}</p>
         <p>Status: {{ $profile->user->status }}</p>

@@ -8,14 +8,18 @@
 </head>
 
 <body>
+<h1 style="color: red;">Courses</h1>
 
 @foreach ($courses as $course)
-    <h2>{{ $course->course }}</h2>
+    <h2 style="color: grey;">{{ $course->course }}</h2>
     <h3>Instructor: {{ $course->instructor }}</h3>
+    <h4>Students Enrolled:</h4>
 
     @if($course->users)
         @foreach ($course->users as $user)
-            <p>{{ $user->name }}</p>
+        <ul>
+            <li>{{ $user->name }}</lis>
+        </ul>
         @endforeach
     @else
         <p>No users found for this course.</p>
